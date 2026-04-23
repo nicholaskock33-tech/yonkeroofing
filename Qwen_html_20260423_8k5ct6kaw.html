@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yonke Roofing (PTY) LTD | Professional Roofing & Construction in Port Elizabeth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-orange: #f97316;
+            --dark-blue: #1e293b;
+            --light-blue: #334155;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+        }
+
+        /* Header */
+        header {
+            background: var(--dark-blue);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .top-bar {
+            background: var(--light-blue);
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--primary-orange);
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-orange);
+        }
+
+        .btn {
+            background: var(--primary-orange);
+            color: var(--white);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--dark-blue);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1632759145351-1cfb80c39017?w=1200') center/cover;
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary-orange);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Quote Form */
+        .quote-form {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .quote-form h3 {
+            color: var(--dark-blue);
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .quote-form p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background: var(--light-bg);
+            padding: 40px 0;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-item i {
+            font-size: 32px;
+            color: #22c55e;
+        }
+
+        .badge-item span {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #fff7ed;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .service-icon i {
+            font-size: 28px;
+            color: var(--primary-orange);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .testimonials .section-header h2 {
+            color: var(--white);
+        }
+
+        .testimonials .section-header p {
+            color: #94a3b8;
+        }
+
+        .testimonial-carousel {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .stars {
+            color: var(--primary-orange);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            color: var(--primary-orange);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .carousel-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary-orange);
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: var(--primary-orange);
+        }
+
+        /* Areas We Serve */
+        .areas-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .map-container {
+            background: #e2e8f0;
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .areas-list h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--dark-blue);
+        }
+
+        .areas-list > p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .areas-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .area-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark-blue);
+        }
+
+        .area-item i {
+            color: var(--primary-orange);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .footer-column h4 {
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #94a3b8;
+        }
+
+        .footer-contact-item i {
+            color: var(--primary-orange);
+            margin-top: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* Sticky Widget */
+        .sticky-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 20px;
+            width: 300px;
+            z-index: 999;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .widget-header {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 12px;
+            margin: -20px -20px 15px -20px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .widget-header h4 {
+            font-size: 16px;
+        }
+
+        .widget-close {
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .widget-form .form-group {
+            margin-bottom: 12px;
+        }
+
+        .widget-form input {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-blue);
+                padding: 20px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .badges-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .areas-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .sticky-widget {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .badges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+
+        /* Page Sections */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <span>Licensed Contractor • Open Today · Closes 5 PM</span>
+                    <span><i class="fas fa-phone"></i> +27 73 229 8399</span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo" onclick="showPage('home')">
+                    <i class="fas fa-home"></i>
+                    Yonke Roofing (PTY) LTD
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('services')">Services</a></li>
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="tel:+27732298399" class="btn"><i class="fas fa-phone"></i> Call Now</a></li>
+                </ul>
+                <div class="mobile-menu" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="hero-badge"><i class="fas fa-star"></i> 4.5★ Rated (13 Google Reviews)</span>
+                        <h1>Expert Roofing, Ceilings & Construction Services in Port Elizabeth</h1>
+                        <p>From wooden trusses to waterproofing, Yonke Roofing delivers quality craftsmanship for residential and commercial projects across Bethelsdorp and Greater Port Elizabeth.</p>
+                        <div class="hero-buttons">
+                            <a href="tel:+27732298399" class="btn"><i class="fas fa-phone"></i> Call +27 73 229 8399</a>
+                            <button class="btn btn-outline" onclick="showPage('contact')"><i class="fas fa-envelope"></i> Request a Quote</button>
+                        </div>
+                    </div>
+                    <div class="quote-form">
+                        <h3>Request a Free Quote</h3>
+                        <p>We respond within 15 minutes!</p>
+                        <form onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <input type="text" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Select a Service</option>
+                                    <option value="roofing">Roofing Installation & Repairs</option>
+                                    <option value="ceilings">Ceilings Installation</option>
+                                    <option value="wooden-flooring">Wooden Flooring</option>
+                                    <option value="waterproofing">Waterproofing</option>
+                                    <option value="cladding">Cladding (Wood & Metal)</option>
+                                    <option value="trusses">Wooden Trusses</option>
+                                    <option value="industrial">Industrial Roofing</option>
+                                    <option value="painting">Painting Services</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-paper-plane"></i> Get My Free Quote
+                            </button>
+                            <p style="text-align: center; margin-top: 10px; font-size: 12px;">No obligation. 100% free estimate.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Badges -->
+        <section class="trust-badges">
+            <div class="container">
+                <div class="badges-grid">
+                    <div class="badge-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Licensed & Insured</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-award"></i>
+                        <span>Quality Guaranteed</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-star"></i>
+                        <span>4.5★ Google Rated</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Trusted Local Builder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Professional Services</h2>
+                    <p>Complete roofing and construction solutions for homes and businesses in Port Elizabeth and surrounding areas.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Roofing Installation & Repairs</h3>
+                        <p>Complete roofing solutions including removing old roofs and installing new ones with quality materials.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Ceilings Installation</h3>
+                        <p>Professional ceiling installation and repairs for residential and commercial properties.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3>Wooden Flooring</h3>
+                        <p>Beautiful wooden flooring installation that adds warmth and value to your home or office.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Waterproofing</h3>
+                        <p>Expert waterproofing services to protect your property from water damage and leaks.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-border-all"></i>
+                        </div>
+                        <h3>Cladding (Wood & Metal)</h3>
+                        <p>Professional wood and metal cladding installation for enhanced aesthetics and protection.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3>Wooden Trusses</h3>
+                        <p>Custom wooden truss fabrication and installation for roofs and structural support.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial Roofing</h3>
+                        <p>Large-scale industrial roofing solutions built to last and meet commercial standards.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h3>Painting Services</h3>
+                        <p>Interior and exterior painting to give your property a fresh, professional finish.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Building Construction</h3>
+                        <p>Complete building construction services from foundation to finish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span style="color: var(--primary-orange);"><i class="fas fa-comments"></i> Client Feedback</span>
+                    <h2>What Our Clients Say</h2>
+                    <p>Trusted by homeowners and businesses across Port Elizabeth for quality roofing and construction.</p>
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-slide active">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Yonke Roofing did an excellent job on our new roof. They removed the old one and installed a beautiful new roof with wooden trusses. Professional team and great workmanship!"</p>
+                        <p class="testimonial-author">— Thabo M.</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"We hired them for ceiling installation and waterproofing. The team was punctual, cleaned up after themselves, and the quality is outstanding. Highly recommend!"</p>
+                        <p class="testimonial-author">— Lerato K.</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best roofing company in Bethelsdorp! They installed wooden flooring in our home and it looks amazing. Fair pricing and excellent customer service."</p>
+                        <p class="testimonial-author">— David N.</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Yonke Roofing handled our industrial roofing project professionally. They completed the job on time and within budget. Will definitely use them again!"</p>
+                        <p class="testimonial-author">— Susan V.</p>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
+                            <span class="dot" onclick="goToSlide(3)"></span>
+                        </div>
+                        <button class="carousel-btn" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas We Serve -->
+        <section class="section">
+            <div class="container">
+                <div class="areas-section">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26456.789012345678!2d25.550000000000001!3d-33.850000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e75d6c0b0b0b0b0%3A0x0!2sBethelsdorp%2C%20Port%20Elizabeth%2C%206059!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="areas-list">
+                        <h3>Areas We Serve</h3>
+                        <p>Proudly serving homeowners and businesses across Port Elizabeth and surrounding areas. Quality roofing and construction services throughout the Eastern Cape.</p>
+                        <div class="areas-columns">
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Bethelsdorp</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Port Elizabeth CBD</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Newton Park</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Walmer</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Summerstrand</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Greenacres</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Despatch</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Cotswold</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Sunridge Park</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Lorraine</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Kabega</div>
+                            <div class="area-item"><i class="fas fa-map-marker-alt"></i> Algoa Park</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page-section">
+        <section class="hero" style="padding: 60px 0;">
+            <div class="container text-center">
+                <h1>Our Services</h1>
+                <p>Professional roofing, construction, and finishing services for every need — residential and commercial.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Roofing Installation & Repairs</h3>
+                        <p>Complete roofing solutions from removal of old roofs to installation of new ones. We handle all types of roofing materials and structures.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>New roof installation</li>
+                            <li>Roof removal and replacement</li>
+                            <li>Roof repairs and maintenance</li>
+                            <li>Leak detection and fixing</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Ceilings Installation</h3>
+                        <p>Professional ceiling installation services for homes and businesses. Quality materials and expert craftsmanship.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Ceiling installation</li>
+                            <li>Ceiling repairs</li>
+                            <li>Ceiling painting</li>
+                            <li>Insulation installation</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3>Wooden Flooring</h3>
+                        <p>Beautiful wooden flooring installation that adds warmth, character, and value to any space.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Hardwood flooring</li>
+                            <li>Laminate flooring</li>
+                            <li>Floor sanding and polishing</li>
+                            <li>Floor repairs</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Waterproofing</h3>
+                        <p>Expert waterproofing solutions to protect your property from water damage, leaks, and moisture.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Roof waterproofing</li>
+                            <li>Wall waterproofing</li>
+                            <li>Basement waterproofing</li>
+                            <li>Balcony waterproofing</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-border-all"></i>
+                        </div>
+                        <h3>Cladding (Wood & Metal)</h3>
+                        <p>Professional wood and metal cladding installation for enhanced aesthetics, insulation, and protection.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Wood cladding</li>
+                            <li>Metal cladding</li>
+                            <li>Exterior cladding</li>
+                            <li>Interior cladding</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3>Wooden Trusses</h3>
+                        <p>Custom wooden truss fabrication and installation for roofs and structural support systems.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Custom truss design</li>
+                            <li>Truss fabrication</li>
+                            <li>Truss installation</li>
+                            <li>Truss repairs</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial Roofing</h3>
+                        <p>Large-scale industrial roofing solutions built to meet commercial standards and withstand heavy use.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Warehouse roofing</li>
+                            <li>Factory roofing</li>
+                            <li>Commercial buildings</li>
+                            <li>Industrial maintenance</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h3>Painting Services</h3>
+                        <p>Professional interior and exterior painting services to give your property a fresh, beautiful finish.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>Interior painting</li>
+                            <li>Exterior painting</li>
+                            <li>Roof painting</li>
+                            <li>Waterproof painting</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Building Construction</h3>
+                        <p>Complete building construction services from foundation to finish for residential and commercial projects.</p>
+                        <ul style="margin: 15px 0; padding-left: 20px; color: var(--gray);">
+                            <li>New building construction</li>
+                            <li>Home renovations</li>
+                            <li>Building extensions</li>
+                            <li>Structural work</li>
+                        </ul>
+                        <button class="btn" onclick="showPage('contact')"><i class="fas fa-phone"></i> Book This Service</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page-section">
+        <section class="hero" style="padding: 60px 0;">
+            <div class="container text-center">
+                <h1>About Yonke Roofing (PTY) LTD</h1>
+                <p>Your trusted local roofing and construction contractor in Bethelsdorp, Port Elizabeth. Building quality, delivering excellence.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Us?</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;">
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: #22c55e; font-size: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Licensed & registered construction company</h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: #22c55e; font-size: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Experienced roofing and construction specialists</h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: #22c55e; font-size: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">4.5-star rating with 13 Google reviews</h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: #22c55e; font-size: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Transparent, upfront pricing with no hidden fees</h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: #22c55e; font-size: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">On-time project completion & quality workmanship</h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: #22c55e; font-size: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">Locally owned & serving Port Elizabeth since establishment</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Core Values</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card text-center">
+                        <div class="service-icon" style="margin: 0 auto 20px;">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Quality Craftsmanship</h3>
+                        <p>We take pride in every roof, ceiling, and floor we install. Quality workmanship is our standard.</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="service-icon" style="margin: 0 auto 20px;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Transparent Pricing</h3>
+                        <p>Detailed quotes, no surprise charges. You approve the scope and cost before we start work.</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="service-icon" style="margin: 0 auto 20px;">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3>Clean & Safe Sites</h3>
+                        <p>We respect your property. Daily cleanup, safety compliance, and spotless handover guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet the Team</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card text-center">
+                        <div style="width: 100px; height: 100px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user-tie" style="font-size: 48px; color: var(--gray);"></i>
+                        </div>
+                        <h3>Elroy Erasmus</h3>
+                        <p style="color: var(--primary-orange);">Small Business Owner</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div style="width: 100px; height: 100px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-hard-hat" style="font-size: 48px; color: var(--gray);"></i>
+                        </div>
+                        <h3>Lead Roofer</h3>
+                        <p style="color: var(--primary-orange);">Roofing & Trusses Specialist</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div style="width: 100px; height: 100px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-tools" style="font-size: 48px; color: var(--gray);"></i>
+                        </div>
+                        <h3>Construction Supervisor</h3>
+                        <p style="color: var(--primary-orange);">Building & Renovations</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div style="width: 100px; height: 100px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-headset" style="font-size: 48px; color: var(--gray);"></i>
+                        </div>
+                        <h3>Client Relations</h3>
+                        <p style="color: var(--primary-orange);">Quotes & Scheduling</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FAQ Page -->
+    <div id="faq" class="page-section">
+        <section class="hero" style="padding: 60px 0;">
+            <div class="container text-center">
+                <h1>Frequently Asked Questions</h1>
+                <p>Got questions about our roofing and construction services? We've got answers.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="max-width: 800px;">
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="service-card">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-orange);">
+                            <i class="fas fa-question-circle"></i> Do you offer free quotes?
+                        </h3>
+                        <p>Yes! We provide free, no-obligation quotes for all roofing, construction, and renovation projects. Call us at +27 73 229 8399 or fill out our online form.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-orange);">
+                            <i class="fas fa-question-circle"></i> Are you licensed and insured?
+                        </h3>
+                        <p>Absolutely. Yonke Roofing (PTY) LTD is a fully registered and licensed construction company in the Eastern Cape, South Africa.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-orange);">
+                            <i class="fas fa-question-circle"></i> What are your operating hours?
+                        </h3>
+                        <p>We are open Monday to Friday from 9 AM to 5 PM. We're closed on Saturdays and Sundays. For urgent inquiries, call us during business hours.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-orange);">
+                            <i class="fas fa-question-circle"></i> How long does a roofing project take?
+                        </h3>
+                        <p>Timeline depends on the scope. A standard roof replacement typically takes 3-7 days, while new construction varies based on size and complexity.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-orange);">
+                            <i class="fas fa-question-circle"></i> Do you handle both residential and commercial projects?
+                        </h3>
+                        <p>Yes! We specialize in both residential and commercial/industrial roofing and construction projects of all sizes.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-orange);">
+                            <i class="fas fa-question-circle"></i> Which areas do you serve?
+                        </h3>
+                        <p>We primarily serve Bethelsdorp, Port Elizabeth CBD, Newton Park, Walmer, Summerstrand, Greenacres, Despatch, and surrounding areas in the Eastern Cape.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-section">
+        <section class="hero" style="padding: 60px 0;">
+            <div class="container text-center">
+                <h1>Contact Us</h1>
+                <p>We're here to help — reach out anytime during business hours.</p>
+                <a href="tel:+27732298399" class="btn" style="margin-top: 20px; font-size: 24px; padding: 20px 40px;">
+                    <i class="fas fa-phone"></i> Call Us Today<br>+27 73 229 8399
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+                    <div>
+                        <h2 style="margin-bottom: 30px;">Send Us a Message</h2>
+                        <form onsubmit="handleSubmit(event)">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email Address" required>
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <input type="tel" placeholder="Phone Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <select required>
+                                        <option value="">Select Service</option>
+                                        <option value="roofing">Roofing Installation & Repairs</option>
+                                        <option value="ceilings">Ceilings Installation</option>
+                                        <option value="wooden-flooring">Wooden Flooring</option>
+                                        <option value="waterproofing">Waterproofing</option>
+                                        <option value="cladding">Cladding (Wood & Metal)</option>
+                                        <option value="trusses">Wooden Trusses</option>
+                                        <option value="industrial">Industrial Roofing</option>
+                                        <option value="painting">Painting Services</option>
+                                        <option value="construction">Building Construction</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Describe your project or issue..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+
+                        <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="footer-contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>+27 73 229 8399</strong><br>
+                                    <small>Call or WhatsApp</small>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>info@yonkeroofing.co.za</strong><br>
+                                    <small>Email Us Anytime</small>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>ext 33, 205 Barberry Rd</strong><br>
+                                    <small>Bethelsdorp, Port Elizabeth, 6059</small>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Mon-Fri: 9AM-5PM</strong><br>
+                                    <small>Sat-Sun: Closed</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container" style="height: 500px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26456.789012345678!2d25.550000000000001!3d-33.850000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e75d6c0b0b0b0b0%3A0x0!2sBethelsdorp%2C%20Port%20Elizabeth%2C%206059!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-home"></i>
+                        Yonke Roofing (PTY) LTD
+                    </a>
+                    <p>Your trusted local roofing and construction experts in Bethelsdorp, Port Elizabeth. Licensed, reliable, and committed to quality craftsmanship.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('services')">Services</a></li>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Roofing Installation</a></li>
+                        <li><a href="#">Ceilings</a></li>
+                        <li><a href="#">Wooden Flooring</a></li>
+                        <li><a href="#">Waterproofing</a></li>
+                        <li><a href="#">Cladding</a></li>
+                        <li><a href="#">Wooden Trusses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+27 73 229 8399</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@yonkeroofing.co.za</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ext 33, 205 Barberry Rd, Bethelsdorp, Port Elizabeth, 6059</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yonke Roofing (PTY) LTD. All rights reserved. Licensed Construction Company in the Eastern Cape, South Africa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Widget -->
+    <div class="sticky-widget" id="stickyWidget">
+        <div class="widget-header">
+            <h4><i class="fas fa-headset"></i> Need a Quote? We'll Call You!</h4>
+            <button class="widget-close" onclick="closeWidget()"><i class="fas fa-times"></i></button>
+        </div>
+        <form class="widget-form" onsubmit="handleWidgetSubmit(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Your Phone Number" required>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+                <i class="fas fa-phone"></i> Request Call Back
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // Testimonial Carousel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function changeSlide(direction) {
+            let newIndex = currentSlide + direction;
+            if (newIndex >= slides.length) newIndex = 0;
+            if (newIndex < 0) newIndex = slides.length - 1;
+            showSlide(newIndex);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-advance carousel
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // Page Navigation
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Update nav links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.toLowerCase().includes(pageName === 'home' ? 'home' : pageName)) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Form Handlers
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Yonke Roofing will contact you shortly to discuss your project.');
+            e.target.reset();
+        }
+
+        function handleWidgetSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Our team will call you back within 15 minutes.');
+            e.target.reset();
+        }
+
+        // Widget Controls
+        function closeWidget() {
+            document.getElementById('stickyWidget').style.display = 'none';
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
